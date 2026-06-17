@@ -31,18 +31,6 @@ namespace JDRent\Support\Security\Rsa;
  *  - Java's BigInteger classes.  See /j2se/src/share/classes/java/math in jdk-1_5_0-src-jrl.zip
  *
  * Here's an example of how to use this library:
- * <code>
- * <?php
-
- *    $a = new \phpseclib\Math\BigInteger(2);
- *    $b = new \phpseclib\Math\BigInteger(3);
- *
- *    $c = $a->add($b);
- *
- *    echo $c->toString(); // outputs 5
- * ?>
- * </code>
- *
  * @category  Math
  * @package   BigInteger
  * @author    Jim Wigginton <terrafrost@php.net>

@@ -4,7 +4,6 @@ namespace JDRent\Support\Security;
 
 use JDRent\Support\Constant\EncryptTypeEnum;
 use JDRent\Support\Constant\SignTypeEnum;
-use JDRent\Support\Constant\KeyTypeEnum;
 
 class AksPlatformSecurity
 {
@@ -20,8 +19,10 @@ class AksPlatformSecurity
         $result = array();
         if ($encryptType == EncryptTypeEnum::DES_RSA) {
             $result['encrypt'] = DeviceCryptoService::encrypt_envelop($srcData, $encryCert);
+            $result['envelope'] = '';
         } else if ($encryptType == EncryptTypeEnum::NONE) {
             $result['encrypt'] = $srcData;
+            $result['envelope'] = '';
         } else {
             throw new \Exception("not support encrypt type is " . $encryptType);
         }

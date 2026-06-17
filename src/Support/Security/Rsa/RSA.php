@@ -8,42 +8,8 @@ namespace JDRent\Support\Security\Rsa;
  * PHP version 5
  *
  * Here's an example of how to encrypt and decrypt text with this library:
- * <code>
- * <?php
-
- *    include 'vendor/autoload.php';
- *
- *    $rsa = new \phpseclib\Crypt\RSA();
- *    extract($rsa->createKey());
- *
- *    $plaintext = 'terrafrost';
- *
- *    $rsa->loadKey($privatekey);
- *    $ciphertext = $rsa->encrypt($plaintext);
- *
- *    $rsa->loadKey($publickey);
- *    echo $rsa->decrypt($ciphertext);
- * ?>
- * </code>
  *
  * Here's an example of how to create signatures and verify signatures with this library:
- * <code>
- * <?php
-
- *    include 'vendor/autoload.php';
- *
- *    $rsa = new \phpseclib\Crypt\RSA();
- *    extract($rsa->createKey());
- *
- *    $plaintext = 'terrafrost';
- *
- *    $rsa->loadKey($privatekey);
- *    $signature = $rsa->sign($plaintext);
- *
- *    $rsa->loadKey($publickey);
- *    echo $rsa->verify($plaintext, $signature) ? 'verified' : 'unverified';
- * ?>
- * </code>
  *
  * @category  Crypt
  * @package   RSA
@@ -2963,7 +2929,7 @@ class RSA
 
     function getBytes($string) {
         $bytes = array();
-        for($i = 0; $i < strlen($string); $i++){    //遍历每一个字�?用ord函数把它们拼接成一个php数组
+        for($i = 0; $i < strlen($string); $i++){    //遍历每一个字�?用ord函数把它们拼接成一个php数组
             $bytes[] = ord($string[$i]);
         }
         return $bytes;

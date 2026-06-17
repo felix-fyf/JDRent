@@ -2,8 +2,6 @@
 
 namespace JDRent\Support\Security;
 
-use JDRent\Support\Constant\EncryptTypeEnum;
-use JDRent\Support\Constant\SignTypeEnum;
 
 error_reporting(E_ERROR);
 ini_set("display_errors", "Off");

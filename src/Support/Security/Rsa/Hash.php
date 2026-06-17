@@ -18,19 +18,6 @@ namespace JDRent\Support\Security\Rsa;
  * {@link http://tools.ietf.org/html/rfc2104#section-2 RFC2104}.}}
  *
  * Here's a short example of how to use this library:
- * <code>
- * <?php
-
- *    include 'vendor/autoload.php';
- *
- *    $hash = new \phpseclib\Crypt\Hash('sha1');
- *
- *    $hash->setKey('abcdefg');
- *
- *    echo base64_encode($hash->hash('abcdefg'));
- * ?>
- * </code>
- *
  * @category  Crypt
  * @package   Hash
  * @author    Jim Wigginton <terrafrost@php.net>

@@ -19,12 +19,14 @@ class SecretKeyPlatformSecurity
         $result = array();
         if ($encryptType == EncryptTypeEnum::RSA) {
             $result['encrypt'] = SecurityUtils::subEncryptByPublicKey($srcData, $publicKey, $encryptType);
+            $result['envelope'] = '';
         } else if ($encryptType == EncryptTypeEnum::ENV_RSA) {
             $encryptEnv = SecurityUtils::encryptWithEnvelope($srcData, $publicKey);
             $result['envelope'] = $encryptEnv['envelope'];
             $result['encrypt'] = $encryptEnv['encrypt'];
         } else if ($encryptType == EncryptTypeEnum::NONE) {
             $result['encrypt'] = $srcData;
+            $result['envelope'] = '';
         } else {
             throw new \Exception("not support encrypt type is " . $encryptType);
         }
