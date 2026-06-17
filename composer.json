@@ -1,0 +1,29 @@
+{
+    "name": "jdrent/jdrent-php-sdk",
+    "description": "JD Rent PHP SDK - 京东租赁",
+    "type": "library",
+    "keywords": ["jd", "rent", "sdk", "京东租赁"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JDRent",
+            "email": "jdrent@jd.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "ext-openssl": "*",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "JDRent\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
