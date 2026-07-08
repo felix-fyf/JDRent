@@ -146,7 +146,8 @@ return 'ok';
 │   │   ├── DefaultJddClient.php  # SMAPI客户端
 │   │   ├── DefaultHapiJddClient.php # HAPI客户端
 │   │   ├── DefaultNapiJddClient.php # NAPI客户端
-│   │   └── DefaultSpiJddClient.php  # SPI客户端
+│   │   ├── DefaultSpiJddClient.php  # SPI客户端
+│   │   └── JdApiClient.php      # 京东API客户端
 │   ├── Config/                   # 配置类
 │   │   └── Config.php
 │   ├── Request/                  # 请求模型类
@@ -154,6 +155,15 @@ return 'ok';
 │       ├── Constant/             # 常量定义
 │       ├── Models/               # 数据模型
 │       ├── Security/             # 安全相关（加密/签名/验签）
+│       │   ├── DataEncryption.php # AES加密解密工具类
+│       │   └── TDE/              # TDE客户端
+│       │       ├── TDEClient.php # TDE客户端主类
+│       │       ├── MKey.php      # 密钥类
+│       │       ├── KeyEncryption.php # 密钥加密类
+│       │       ├── DataEncryption.php # 数据加密类
+│       │       ├── Crypto.php    # 加密工具类
+│       │       ├── Constants.php # 常量定义
+│       │       ├── IndexCalculator.php # 索引计算类
 │       └── Util/                 # 工具类
 ├── examples/                     # 使用示例
 ├── composer.json
